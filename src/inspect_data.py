@@ -124,7 +124,7 @@ df = df.drop(columns=[
     "Latitude",
     "Longitude"
 ])
-# Now that we've validated the source data, we don't need to store this duplicate validation column in our production dataset
+# we've validated the source data, we don't need to store this duplicate validation column in our production dataset
 df = df.drop(columns=["calculated_shipping_days"])
 
 print("\nNumber of columns after dropping:")
@@ -133,7 +133,7 @@ print(len(df.columns))
 print("\nRemaining columns:")
 print(df.columns.tolist())
 
-# Rename columns
+# rename columns
 df = df.rename(columns={
     "Type": "order_type",
     "Days for shipping (real)": "actual_shipping_days",

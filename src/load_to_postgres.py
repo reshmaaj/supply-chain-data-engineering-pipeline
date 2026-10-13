@@ -10,10 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# --------------------------------------------------
-# 1. CONFIGURATION
-# --------------------------------------------------
-
 CSV_PATH = "raw_datas/DataCoSupplyChainDataset.csv"
 
 DB_CONFIG = {
@@ -26,9 +22,7 @@ DB_CONFIG = {
 PIPELINE_NAME = "logistics_pipeline"
 
 
-# --------------------------------------------------
-# 2. READ AND CLEAN SOURCE DATA
-# --------------------------------------------------
+# READ AND CLEAN SOURCE DATA
 
 def read_and_clean_data():
     print("Reading source CSV...")
@@ -126,9 +120,7 @@ def read_and_clean_data():
     return df
 
 
-# --------------------------------------------------
 # 3. INCREMENTAL LOAD
-# --------------------------------------------------
 
 def run_pipeline():
     start_time = datetime.now()
@@ -307,9 +299,6 @@ def run_pipeline():
             print("Database connection closed.")
 
 
-# --------------------------------------------------
-# 4. ENTRY POINT
-# --------------------------------------------------
-
+# ENTRY POINT
 if __name__ == "__main__":
     run_pipeline()

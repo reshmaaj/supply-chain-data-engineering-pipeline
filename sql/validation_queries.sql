@@ -1,8 +1,4 @@
--- ============================================================
--- Logistics Data Engineering Project
 -- Warehouse Validation Queries
--- ============================================================
-
 
 -- 1. Validate fact table grain
 SELECT
